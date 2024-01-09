@@ -1,10 +1,13 @@
-def is_number_even(number):
-    if (number%2 == 0):
-        return True
-    else:
-        return False
+import math
 
-def filter_numbers(predicate, iterable):
+def isPerfectSquare(x):
+    s = int(math.sqrt(x))
+    return s*s == x
+ 
+def is_fibonacci_number(n):
+    return isPerfectSquare(5*n*n + 4) or isPerfectSquare(5*n*n - 4)
+
+def filter_fibonacci_numbers(predicate, iterable):
     return [item for item in iterable if predicate(item)]
         
 def display(numbers):
@@ -13,7 +16,7 @@ def display(numbers):
         
 def main():
     numbers = [2, 1, 4, 3, 6, 8, 5, 5, 10]
-    result = filter_numbers(is_number_even, numbers)
+    result = filter_fibonacci_numbers(is_fibonacci_number, numbers)
     display(result)
 
 if __name__ == "__main__":
