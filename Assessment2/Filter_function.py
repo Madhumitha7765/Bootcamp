@@ -4,7 +4,7 @@ def is_equal_to_5(number):
     else:
         return False
 
-def custom_filter(predicate, iterable):
+def filter_number(predicate, iterable):
     return [item for item in iterable if predicate(item)]
         
 def display(numbers):
@@ -12,6 +12,6 @@ def display(numbers):
         print(number)
 
 numbers = [2, 1, 4, 3, 6, 8, 5, 5, 10]
-result = custom_filter(is_equal_to_5, numbers)
+result = filter_number(is_equal_to_5, numbers)
 display(result)
 
