@@ -4,7 +4,7 @@ def is_even_number(number):
     else:
         return False
 
-def custom_filter(predicate, iterable):
+def filter_numbers(predicate, iterable):
     return [item for item in iterable if predicate(item)]
         
 def display(numbers):
@@ -12,6 +12,6 @@ def display(numbers):
         print(number)
 
 numbers = [2, 1, 4, 3, 6, 8, 5, 5, 10]
-result = custom_filter(is_even_number, numbers)
+result = filter_numbers(is_even_number, numbers)
 display(result)
 
