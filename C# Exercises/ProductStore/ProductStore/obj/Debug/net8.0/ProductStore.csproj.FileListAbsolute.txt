@@ -1,0 +1,14 @@
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\bin\Debug\net8.0\ProductStore.exe
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\bin\Debug\net8.0\ProductStore.deps.json
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\bin\Debug\net8.0\ProductStore.runtimeconfig.json
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\bin\Debug\net8.0\ProductStore.dll
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\bin\Debug\net8.0\ProductStore.pdb
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\ProductStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\ProductStore.AssemblyInfoInputs.cache
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\ProductStore.AssemblyInfo.cs
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\ProductStore.csproj.CoreCompileInputs.cache
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\ProductStore.dll
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\refint\ProductStore.dll
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\ProductStore.pdb
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\ProductStore.genruntimeconfig.cache
+C:\Users\X6MSARAV\Desktop\C#\ProductStore\ProductStore\obj\Debug\net8.0\ref\ProductStore.dll
