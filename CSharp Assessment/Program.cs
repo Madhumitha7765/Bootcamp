@@ -4,8 +4,13 @@ using System.Collections.Generic;
 
 class Device
 {
+    [Required(ErrorMessage = "ID Property Requires Value")]
     private string _id;
+
+    [Range(10, 100, ErrorMessage = "Code Value Must Be Within 10-100")]
     private int _code;
+
+    [MaxLength(100, ErrorMessage = "Max of 100 Characters are allowed")]
     private string _description;
 
     public Device(string id, int code, string description)
@@ -15,34 +20,42 @@ class Device
         Description = description;
     }
 
-    public string Id
+    public string Id { get; private set; }
+
+    public int Code { get; private set; }
+
+    public string Description { get; private set; }
+}
+
+[AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
+class RequiredAttribute : Attribute
+{
+    public string ErrorMessage { get; set; }
+}
+
+[AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
+class RangeAttribute : Attribute
+{
+    public int Min { get; }
+    public int Max { get; }
+    public string ErrorMessage { get; set; }
+
+    public RangeAttribute(int min, int max)
     {
-        get => _id;
-        private set => _id = ValidateAndSetProperty(value, "ID Property Requires Value");
+        Min = min;
+        Max = max;
     }
+}
 
-    public int Code
+[AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false)]
+class MaxLengthAttribute : Attribute
+{
+    public int MaxLength { get; }
+    public string ErrorMessage { get; set; }
+
+    public MaxLengthAttribute(int maxLength)
     {
-        get => _code;
-        private set => _code = ValidateAndSetProperty(value, "Code Value Must Be Within 10-100", 10, 100);
-    }
-
-    public string Description
-    {
-        get => _description;
-        private set => _description = ValidateAndSetProperty(value, "Max of 100 Characters are allowed", maxLength: 100);
-    }
-
-    private T ValidateAndSetProperty<T>(T value, string errorMessage, T minValue = default, T maxValue = default, int maxLength = 0)
-    {
-        if ((minValue != null && ((IComparable)value).CompareTo(minValue) < 0) ||
-            (maxValue != null && ((IComparable)value).CompareTo(maxValue) > 0) ||
-            (maxLength > 0 && value is string strValue && strValue.Length > maxLength))
-        {
-            throw new ArgumentException(errorMessage);
-        }
-
-        return value;
+        MaxLength = maxLength;
     }
 }
 
@@ -52,28 +65,53 @@ class ObjectValidator
     {
         errors = new List<string>();
 
-        if (obj == null)
+        var type = typeof(T);
+        var fields = type.GetFields();
+        var properties = type.GetProperties();
+
+        foreach (var field in fields)
         {
-            errors.Add("Object cannot be null.");
-            return false;
+            ValidateMember(obj, field, errors);
         }
 
-        if (obj is Device device)
+        foreach (var property in properties)
         {
-            try
-            {
-                device.Id = device.Id;
-                device.Code = device.Code;
-                device.Description = device.Description;
-            }
-            catch (ArgumentException ex)
-            {
-                errors.Add(ex.Message);
-                return false;
-            }
+            ValidateMember(obj, property, errors);
         }
 
-        return true;
+        return errors.Count == 0;
+    }
+
+    private static void ValidateMember<T>(T obj, System.Reflection.MemberInfo member, List<string> errors)
+    {
+        var attributes = member.GetCustomAttributes(false);
+        foreach (var attribute in attributes)
+        {
+            if (attribute is RequiredAttribute required)
+            {
+                var value = member is System.Reflection.FieldInfo ? ((System.Reflection.FieldInfo)member).GetValue(obj) : ((System.Reflection.PropertyInfo)member).GetValue(obj);
+                if (value == null || string.IsNullOrEmpty(value.ToString()))
+                {
+                    errors.Add(required.ErrorMessage);
+                }
+            }
+            else if (attribute is RangeAttribute range)
+            {
+                var value = member is System.Reflection.FieldInfo ? (int)((System.Reflection.FieldInfo)member).GetValue(obj) : (int)((System.Reflection.PropertyInfo)member).GetValue(obj);
+                if (value < range.Min || value > range.Max)
+                {
+                    errors.Add(range.ErrorMessage);
+                }
+            }
+            else if (attribute is MaxLengthAttribute maxLength)
+            {
+                var value = member is System.Reflection.FieldInfo ? (string)((System.Reflection.FieldInfo)member).GetValue(obj) : (string)((System.Reflection.PropertyInfo)member).GetValue(obj);
+                if (value != null && value.Length > maxLength.MaxLength)
+                {
+                    errors.Add(maxLength.ErrorMessage);
+                }
+            }
+        }
     }
 }
 
@@ -81,7 +119,7 @@ class Program
 {
     static void Main()
     {
-        Device deviceObj = new Device("test01", 180, "sample description");
+        Device deviceObj = new Device("test01", 80, "sample description");
 
         List<string> errors;
         bool isValid = ObjectValidator.Validate(deviceObj, out errors);
