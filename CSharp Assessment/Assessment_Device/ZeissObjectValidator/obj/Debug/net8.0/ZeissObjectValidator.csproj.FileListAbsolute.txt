@@ -1,0 +1,11 @@
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\obj\Debug\net8.0\ZeissObjectValidator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\obj\Debug\net8.0\ZeissObjectValidator.AssemblyInfoInputs.cache
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\obj\Debug\net8.0\ZeissObjectValidator.AssemblyInfo.cs
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\obj\Debug\net8.0\ZeissObjectValidator.csproj.CoreCompileInputs.cache
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\bin\Debug\net8.0\ZeissObjectValidator.deps.json
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\bin\Debug\net8.0\ZeissObjectValidator.dll
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\bin\Debug\net8.0\ZeissObjectValidator.pdb
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\obj\Debug\net8.0\ZeissObjectValidator.dll
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\obj\Debug\net8.0\refint\ZeissObjectValidator.dll
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\obj\Debug\net8.0\ZeissObjectValidator.pdb
+C:\Users\X6MSARAV\Desktop\C#\Assessment_Device\ZeissObjectValidator\obj\Debug\net8.0\ref\ZeissObjectValidator.dll

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Assessment_Device/1.0.0": {
+        "dependencies": {
+          "ZeissObjectValidator": "1.0.0"
+        },
+        "runtime": {
+          "Assessment_Device.dll": {}
+        }
+      },
+      "ZeissObjectValidator/1.0.0": {
+        "runtime": {
+          "ZeissObjectValidator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Assessment_Device/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ZeissObjectValidator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
