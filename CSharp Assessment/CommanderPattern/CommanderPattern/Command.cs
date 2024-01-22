@@ -20,9 +20,7 @@ public class Command
 
         if (methodInfo != null)
         {
-            Action methodDelegate = (Action)Delegate.CreateDelegate(typeof(Action), target, methodInfo);
-
-            methodDelegate?.Invoke();
+            methodInfo.Invoke(target, null);
         }
         else
         {
