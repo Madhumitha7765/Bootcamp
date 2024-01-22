@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 
@@ -9,51 +10,39 @@ class Device
 
     public Device(string id, int code, string description)
     {
-        SetId(id);
-        SetCode(code);
-        SetDescription(description);
+        Id = id;
+        Code = code;
+        Description = description;
     }
 
     public string Id
     {
-        get { return _id; }
+        get => _id;
+        private set => _id = ValidateAndSetProperty(value, "ID Property Requires Value");
     }
 
     public int Code
     {
-        get { return _code; }
+        get => _code;
+        private set => _code = ValidateAndSetProperty(value, "Code Value Must Be Within 10-100", 10, 100);
     }
 
     public string Description
     {
-        get { return _description; }
+        get => _description;
+        private set => _description = ValidateAndSetProperty(value, "Max of 100 Characters are allowed", maxLength: 100);
     }
 
-    public void SetId(string id)
+    private T ValidateAndSetProperty<T>(T value, string errorMessage, T minValue = default, T maxValue = default, int maxLength = 0)
     {
-        if (string.IsNullOrEmpty(id))
+        if ((minValue != null && ((IComparable)value).CompareTo(minValue) < 0) ||
+            (maxValue != null && ((IComparable)value).CompareTo(maxValue) > 0) ||
+            (maxLength > 0 && value is string strValue && strValue.Length > maxLength))
         {
-            throw new ArgumentException("ID Property Requires Value");
+            throw new ArgumentException(errorMessage);
         }
-        _id = id;
-    }
 
-    public void SetCode(int code)
-    {
-        if (code < 10 || code > 100)
-        {
-            throw new ArgumentException("Code Value Must Be Within 10-100");
-        }
-        _code = code;
-    }
-
-    public void SetDescription(string description)
-    {
-        if (description != null && description.Length > 100)
-        {
-            throw new ArgumentException("Max of 100 Characters are allowed");
-        }
-        _description = description;
+        return value;
     }
 }
 
@@ -63,15 +52,19 @@ class ObjectValidator
     {
         errors = new List<string>();
 
-        if (obj is Device)
+        if (obj == null)
         {
-            Device device = (Device)(object)obj;
+            errors.Add("Object cannot be null.");
+            return false;
+        }
 
+        if (obj is Device device)
+        {
             try
             {
-                device.SetId(device.Id);
-                device.SetCode(device.Code);
-                device.SetDescription(device.Description);
+                device.Id = device.Id;
+                device.Code = device.Code;
+                device.Description = device.Description;
             }
             catch (ArgumentException ex)
             {
@@ -88,7 +81,7 @@ class Program
 {
     static void Main()
     {
-        Device deviceObj = new Device("test01", 80, "sample description");
+        Device deviceObj = new Device("test01", 180, "sample description");
 
         List<string> errors;
         bool isValid = ObjectValidator.Validate(deviceObj, out errors);
