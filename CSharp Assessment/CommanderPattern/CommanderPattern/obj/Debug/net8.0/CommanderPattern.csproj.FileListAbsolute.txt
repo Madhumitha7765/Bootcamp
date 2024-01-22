@@ -1,0 +1,14 @@
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\bin\Debug\net8.0\CommanderPattern.exe
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\bin\Debug\net8.0\CommanderPattern.deps.json
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\bin\Debug\net8.0\CommanderPattern.runtimeconfig.json
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\bin\Debug\net8.0\CommanderPattern.dll
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\bin\Debug\net8.0\CommanderPattern.pdb
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\CommanderPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\CommanderPattern.AssemblyInfoInputs.cache
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\CommanderPattern.AssemblyInfo.cs
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\CommanderPattern.csproj.CoreCompileInputs.cache
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\CommanderPattern.dll
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\refint\CommanderPattern.dll
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\CommanderPattern.pdb
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\CommanderPattern.genruntimeconfig.cache
+C:\Users\X6MSARAV\Desktop\C#\CommanderPattern\CommanderPattern\obj\Debug\net8.0\ref\CommanderPattern.dll
