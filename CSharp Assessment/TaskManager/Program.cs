@@ -12,7 +12,7 @@ public class Program
     {
         Printer printerObj = new Printer();
         Scanner scannerObj = new Scanner();
-        PrintScanner printScannerObj = new PrintScanner(printerObj, scannerObj);
+        PrintScanner printScannerObj = new PrintScanner();
 
         TaskManager.ExecutePrintTask(printerObj, "Test.doc");
         TaskManager.ExecuteScanTask(scannerObj, "MyImage.png");
