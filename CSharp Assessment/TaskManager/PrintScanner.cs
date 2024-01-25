@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -7,27 +7,27 @@ using System.Threading.Tasks;
 
 namespace TaskManagerExercise
 {
-    
-public class PrintScanner : IPrintable, IScannable
-{
-    private readonly IPrinter printer;
-    private readonly IScanner scanner;
 
-    public PrintScanner()
+    public class PrintScanner : IPrintable, IScannable
     {
-        this.printer = new Printer();
-        this.scanner = new Scanner();
+        private readonly IPrintable printer;
+        private readonly IScannable scanner;
+
+        public PrintScanner()
+        {
+            this.printer = new Printer();
+            this.scanner = new Scanner();
+        }
+
+        public void Print(string document)
+        {
+            printer.Print(document);
+        }
+
+        public void Scan(string document)
+        {
+            scanner.Scan(document);
+        }
     }
 
-    public void Print(string document)
-    {
-        this.printer.print()
-    }
-
-    public void Scan(string document)
-    {
-        this.scanner.scan()
-    }
-}
-    
 }
