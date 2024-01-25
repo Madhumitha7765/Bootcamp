@@ -1,0 +1,14 @@
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\bin\Debug\net8.0\DoorSimulation.exe
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\bin\Debug\net8.0\DoorSimulation.deps.json
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\bin\Debug\net8.0\DoorSimulation.runtimeconfig.json
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\bin\Debug\net8.0\DoorSimulation.dll
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\bin\Debug\net8.0\DoorSimulation.pdb
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\DoorSimulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\DoorSimulation.AssemblyInfoInputs.cache
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\DoorSimulation.AssemblyInfo.cs
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\DoorSimulation.csproj.CoreCompileInputs.cache
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\DoorSimulation.dll
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\refint\DoorSimulation.dll
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\DoorSimulation.pdb
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\DoorSimulation.genruntimeconfig.cache
+C:\Users\X6MSARAV\Desktop\DoorSimulation\DoorSimulation\obj\Debug\net8.0\ref\DoorSimulation.dll
