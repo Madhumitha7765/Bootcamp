@@ -198,10 +198,20 @@ public class Newspaper : ISubscriber
 
 
 
-#### Using Delegates
+### Using Delegates
 
-C# provides built-in support for the Observer Pattern through events and delegates. The event keyword in C# is a perfect example of the Observer Pattern in action.
+Delegates are reference types that take a method as parameter and once the delegate is invoked the method is called. Once we declare a delegate we need to provide the parameters that the referenced function is expecting and also provide the return type of that function as shown below.
+```
+public delegate void MyDelegate(int number);
+```
+The preceding delegate expects a method that takes a single integer parameter and returns void.
 
+What the Compiler does is it creates a class in the IL code as shown in the figure below.
+
+![image](https://github.com/Madhumitha7765/Bootcamp/assets/68181437/4830fff9-6947-4483-9093-bd847eed10d2)
+
+
+C# provides built-in support for the Observer Pattern through events and delegates. 
 
 ```
 
