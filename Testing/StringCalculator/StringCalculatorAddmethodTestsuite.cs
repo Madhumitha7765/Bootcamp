@@ -107,16 +107,5 @@ namespace StringCalculatorLib.Test
             Assert.Equal(expected, actual);
         }
 
-        //[Fact]
-        //public void GivenMultipleAdjacentDelimiters_ReturnsSum()
-        //{
-        //    string input = "1***3";
-        //    int expected = 4;
-
-        //    int actual = StringCalculator.Add(input);
-
-        //    Assert.Equal(expected, actual);
-        //}
-
     }
 }
