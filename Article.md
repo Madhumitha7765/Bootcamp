@@ -1,4 +1,4 @@
-# Observer Pattern in C#: From Basics to Advanced
+# Orchestrating Dynamic Interactions: Exploring Power of Observer Pattern in C#
 
 ## Introduction
 
