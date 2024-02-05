@@ -12,21 +12,16 @@ In this article, we embark on a journey into the heart of the Observer Pattern, 
 
 At its essence, the Observer Pattern is a behavioral design pattern that facilitates a one-to-many relationship between objects. It defines a dependency between objects so that when one object changes its state, all its dependents are notified and updated automatically. This dynamic interaction eliminates the need for tight coupling.
 
-### Players in the Symphony
-
-**1. Subject:**
-   - The core entity that maintains a list of dependents, also known as observers.
-   - Represents the subject of interest whose state changes trigger notifications.
-
-**2. Observer:**
-   - The entities interested in the state changes of the subject.
-   - Responds to notifications initiated by the subject.
+![image](https://github.com/Madhumitha7765/Bootcamp/assets/68181437/0ce108ce-6a7f-42da-bb55-d0fea10e8289)
 
 ### Participants
 
 **1.Subject:** Knows its observers and provides an interface for attaching and detaching Observer objects.
+
 **2.Observer:** Defines an updating interface for objects that should be notified of changes in a subject.
+
 **3.ConcreteSubject:** Stores state of interest to ConcreteObserver objects and sends a notification to its observers when its state changes.
+
 **4.ConcreteObserver:** Maintains a reference to a ConcreteSubject object and implements the Observer updating interface to keep its state consistent with the subject’s.
 
 ### Notification Mechanism
@@ -265,6 +260,6 @@ In situations where relationships are static, direct communication provides a mo
 
 ## Conclusion
 
-The Observer Pattern provides a robust and scalable solution for the real-time stock market monitoring application. By fostering a dynamic, loosely coupled architecture, the system becomes more adaptable to changing requirements, ensuring a responsive and agile application that meets the demands of dynamic financial markets.
+The Observer Pattern provides a robust and scalable solution by fostering a dynamic, loosely coupled architecture, the system becomes more adaptable to changing requirements, ensuring a responsive and agile application.
 
 In the intricate tapestry of software design, the Observer Pattern emerges as a key player, orchestrating dynamic relationships with finesse. By dispelling misconceptions, understanding its nuances, and recognizing scenarios where alternatives may shine, we empower ourselves to compose software systems that resonate with flexibility, scalability, and maintainability. The Observer Pattern, when conducted skillfully, transforms code into a symphony of dynamic interactions, a testament to the artistry embedded in the world of software design.
