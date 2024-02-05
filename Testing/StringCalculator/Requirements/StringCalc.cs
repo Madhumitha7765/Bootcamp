@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -43,10 +43,11 @@ namespace StringCalculatorLib
                 numbers.Length - numbers.IndexOf('\n') - 1);
 
         private static int SumNumbers(string numbers, string delimiter) =>
-            numbers.Split(delimiter.ToCharArray()).Sum(ParseToInt);
+            numbers.Split(delimiter.ToCharArray())
+                .Where(n => !IsGreaterThanThousand(Convert.ToInt32(n)))
+                .Sum(ParseToInt);
 
-        private static int ParseToInt(string n) =>
-            IsGreaterThanThousand(Convert.ToInt32(n)) ? 0 : Convert.ToInt32(string.IsNullOrEmpty(n) ? "0" : n);
+        private static int ParseToInt(string n) => Convert.ToInt32(string.IsNullOrEmpty(n) ? "0" : n);
 
         private static bool IsGreaterThanThousand(int nn) => nn > 1000;
 
@@ -54,9 +55,3 @@ namespace StringCalculatorLib
             getPossibleDelimiters.ToCharArray().Any(input.Contains);
     }
 }
-
-
-
-
-
-
