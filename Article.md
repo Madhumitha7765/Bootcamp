@@ -34,7 +34,7 @@ The subject notifies observers about state changes through a defined interface. 
 
 
 
-### Simple Implementation
+## Simple Implementation
 
 Let’s start with a basic example: a news agency and its subscribers.
 
