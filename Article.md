@@ -14,6 +14,8 @@ At its essence, the Observer Pattern is a behavioral design pattern that facilit
 
 ![image](https://github.com/Madhumitha7765/Bootcamp/assets/68181437/0ce108ce-6a7f-42da-bb55-d0fea10e8289)
 
+
+
 ### Participants
 
 **1.Subject:** Knows its observers and provides an interface for attaching and detaching Observer objects.
@@ -24,13 +26,18 @@ At its essence, the Observer Pattern is a behavioral design pattern that facilit
 
 **4.ConcreteObserver:** Maintains a reference to a ConcreteSubject object and implements the Observer updating interface to keep its state consistent with the subject’s.
 
+
+
 ### Notification Mechanism
 
 The subject notifies observers about state changes through a defined interface. This seamless communication allows for a decoupled and extensible architecture, a hallmark of well-designed systems.
 
+
+
 ### Simple Implementation
 
 Let’s start with a basic example: a news agency and its subscribers.
+
 
 ### Before Knowledge of observer pattern
 
@@ -49,6 +56,8 @@ NewsAgency System
   - PrintNews()
 
 - Program
+
+
 
 
 ```
@@ -129,7 +138,10 @@ class Program
 
 
 ```
+
+
 #### After Observer Pattern
+
 
 ```
 
@@ -185,9 +197,11 @@ public class Newspaper : ISubscriber
 ```
 
 
+
 #### Using Delegates
 
 C# provides built-in support for the Observer Pattern through events and delegates. The event keyword in C# is a perfect example of the Observer Pattern in action.
+
 
 ```
 
@@ -216,6 +230,7 @@ public class Newspaper
 ```
 
 
+
 ## Common Misconceptions
 
 ### Misconception 1: Overcomplication
@@ -226,6 +241,8 @@ Some might perceive the Observer Pattern as an overcomplication, particularly in
 
 Contrary to belief, the Observer Pattern is not confined to specific scenarios. Its versatility spans various domains, from graphical user interfaces to distributed event-driven systems, making it a potent tool in the software architect's arsenal.
 
+
+
 ## When Not to Use the Observer Pattern
 
 As with any tool, there are situations where the Observer Pattern might not be the optimal choice:
@@ -235,6 +252,8 @@ As with any tool, there are situations where the Observer Pattern might not be t
 
 2. **Performance-Critical Environments:**
    - In high-frequency event scenarios where performance is critical, the Observer Pattern's overhead might become a concern. Consider alternative patterns, such as the Publish-Subscribe Pattern, which optimizes for efficiency.
+
+
 
 ## Alternatives and Best Practices
 
@@ -257,6 +276,7 @@ In situations where relationships are static, direct communication provides a mo
 - **Scalability:** As the application grows with more stocks and components, the Observer Pattern simplifies the addition of new elements. New stocks can easily join the system, and new components can subscribe to updates without disrupting the existing architecture.
 
 - **Maintainability:** With a clear separation of concerns, the system becomes more maintainable. Changes to the behavior of stocks or components can be made independently, reducing the risk of unintended consequences.
+
 
 ## Conclusion
 
