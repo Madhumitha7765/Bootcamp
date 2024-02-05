@@ -60,7 +60,7 @@ NewsAgency System
 
 
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 
@@ -140,10 +140,10 @@ class Program
 ```
 
 
-#### After Observer Pattern
+### After Observer Pattern
 
 
-```
+```csharp
 
 // Subject
 public interface INewsAgency
@@ -201,7 +201,7 @@ public class Newspaper : ISubscriber
 ### Using Delegates
 
 Delegates are reference types that take a method as parameter and once the delegate is invoked the method is called. Once we declare a delegate we need to provide the parameters that the referenced function is expecting and also provide the return type of that function as shown below.
-```
+```csharp
 public delegate void MyDelegate(int number);
 ```
 The preceding delegate expects a method that takes a single integer parameter and returns void.
@@ -213,7 +213,7 @@ What the Compiler does is it creates a class in the IL code as shown in the figu
 
 C# provides built-in support for the Observer Pattern through events and delegates. 
 
-```
+```csharp
 
 public class NewsAgency
 {
