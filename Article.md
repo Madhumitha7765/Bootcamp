@@ -239,7 +239,62 @@ public class Newspaper
 
 ```
 
+## Using Events
 
+There are two essential classes: the Subject class and Observer class.
+
+SUBJECT CLASS
+
+```csharp
+
+public class Subject
+   {
+       public event EventHandler eventHandler;              
+
+       public void NotifyObservers()
+       {
+           if (eventHandler != null)                          
+           {
+               eventHandler(this, EventArgs.Empty);    
+           }
+       }
+   }
+
+
+```
+
+OBSERVER CLASS
+
+```csharp
+
+public class Observer
+  {
+      Subject subject;
+
+      public Observer(Subject subject)
+      {
+          this.subject = subject;
+      }
+
+      public void Subscribe()
+      {
+          subject.eventHandler += DoSomething;    
+      }
+
+      public void UnSubscribe()
+      {
+          subject.eventHandler -= DoSomething;   
+      }
+
+      private void DoSomething(object sender, EventArgs e)
+      {
+          Console.WriteLine("This Observer instance has received
+              a notification from its associated Subject.");
+      }
+  }
+
+
+```
 
 ## Common Misconceptions
 
