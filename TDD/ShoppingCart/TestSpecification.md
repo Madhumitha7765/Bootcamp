@@ -25,7 +25,7 @@ The pricing table for items in the supermarket checkout system:
 - **When**: Calculating the total price.
 - **Then**: The total price should be 50.
 
-### Test Case 3: Multiple Items
+### Test Case 3: Multiple Items without Discount
 - **Given**: A cart with items 'A' and 'B'.
 - **When**: Calculating the total price.
 - **Then**: The total price should be 80.
