@@ -30,6 +30,31 @@
 - **Inputs:** Feature data for creation, valid and invalid IDs for retrieval and deletion.
 - **Expected Output:** Successful creation, retrieval, and deletion; appropriate handling of invalid IDs.
 
+## Validating Insertion of Feature into database
+- **Objective:** Ensure that the `CreateAsync` method in the `MongoDBService` class correctly inserts a new feature into the MongoDB collection.
+- **Inputs:** MongoDB mock settings, mock feature collection, mock service, feature object
+- **Expected Output:** Successful insertion into mongodb.
+
+```csharp
+[Test]
+public async Task CreateAsync_ShouldInsertFeature()
+{
+    // Arrange
+    var mockSettings = new Mock<IOptions<MongoDBSettings>>();
+    var mockCollection = new Mock<IMongoCollection<Feature>>();
+    var service = new MongoDBService(mockSettings.Object);
+    var feature = new Feature { Id = "1", username = "testUser", movieIds = new List<string> { "movie1", "movie2" } };
+ 
+    // Act
+    await service.CreateAsync(feature);
+ 
+    // Assert
+    mockCollection.Verify(m => m.InsertOneAsync(feature, It.IsAny<InsertOneOptions>(), It.IsAny<CancellationToken>()), Times.Once);
+
+}
+```
+
+
 ## HTTP Responses
 - **Objective:** Verify that controller methods return correct HTTP status codes and response bodies.
 - **Inputs:** Successful and unsuccessful feature publication attempts.
