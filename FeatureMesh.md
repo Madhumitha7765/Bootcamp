@@ -19,7 +19,7 @@ public async Task CreateAsync_ShouldInsertFeature()
     var mockSettings = new Mock<IOptions<MongoDBSettings>>();
     var mockCollection = new Mock<IMongoCollection<Feature>>();
     var service = new MongoDBService(mockSettings.Object);
-    var feature = new Feature { username="Joe", entity="student", entityid="2", entitycontext="abcuniversity", name = "marks", entityIds = new List<string> { "student" } };
+    var feature = new Feature {  };
  
     // Act
     await service.CreateAsync(feature);
