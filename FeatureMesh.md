@@ -2,8 +2,13 @@
 
 ## Feature Publication Process
 - **Objective:** Ensure that Data Scientists can successfully publish features on the Feature Mesh platform.
-- **Inputs:** Feature name, keywords, timestamp, publication method (GUI or library).
+- **Inputs:** Feature name or keyword.
 - **Expected Output:** Confirmation message upon successful publication.
+
+## Input Validation
+- **Objective:** Validate that controller methods correctly handle invalid inputs.
+- **Inputs:** Missing required fields, invalid inputs.
+- **Expected Output:** Proper handling of invalid inputs, appropriate error messages.
 
 ## Metadata Specification
 - **Objective:** Validate that users can provide accurate metadata during the feature publication process.
@@ -21,14 +26,9 @@
 - **Expected Output:** Appropriate error messages, successful publication upon issue resolution.
 
 ## Integration Testing - CRUD Operations
-- **Objective:** Test all CRUD operations (CreateAsync, GetAsync, AddToPlaylistAsync, DeleteAsync) to ensure correct interaction with the Feature Mesh repository.
+- **Objective:** Test all CRUD operations (CreateAsync, GetAsync, AddFeatureAsync, DeleteAsync) to ensure correct interaction with the Feature Mesh repository.
 - **Inputs:** Feature data for creation, valid and invalid IDs for retrieval and deletion.
 - **Expected Output:** Successful creation, retrieval, and deletion; appropriate handling of invalid IDs.
-
-## Input Validation
-- **Objective:** Validate that controller methods correctly handle invalid inputs.
-- **Inputs:** Missing required fields, invalid IDs.
-- **Expected Output:** Proper handling of invalid inputs, appropriate error messages.
 
 ## HTTP Responses
 - **Objective:** Verify that controller methods return correct HTTP status codes and response bodies.
