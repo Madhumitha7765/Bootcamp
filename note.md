@@ -55,8 +55,53 @@ if JS code is executed in browser - its called window obj
 - Explicit Binding : used if this value must be custom, implemented using cal,apply
 | test.apply(100) : sets this to 100 in execution context obj.
 
+### New binding
+
+```js
+function Student(rollnum) {
+  this._rollNumber = rollnum;
+  this.getRollNumber = function() {
+    return this._rollNumber;
+ / }
+}
+
+var temp = new Student(20);
+console.log(temp.getRollNumber());
+```
+> new - creates empty object
+> constructor populates data in the obj created
 
 
+## Typescript - JS transpiler
+
+# UI
+
+## Types 
+4 forms 
+- Rich : Access all resources of OS, its a Desktop UI. eg: visual studio
+- Reachable
+- Rich internet application UI - develop rich content, use web plugins to make it reachable
+- hybrid UI
+- Other techniques - headless UI, micro frontends
+- Progressive web apps - app like web behaviour
+
+## Browser working
+
+- The Critical Rendering Path :  sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen
+- DOM : https://dev.to/coderedjack/critical-rendering-path-web-performance-23ij
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fguillermo.at%2Fbrowser-critical-render-path&psig=AOvVaw2jODxWuU3_AikSwin5B2yR&ust=1709283458526000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNirwaKX0IQDFQAAAAAdAAAAABAU
+- Composite UI - one dom tree for entire applicaition(Single page appl. SPA)
+
+## React
+- VDOM tree
+- for dynamic apps
+
+## Angular 
+- No VDOM but similar concept implemented
+
+> refer JAM stack
+> web assemblies
+> blazer
 
 
 
