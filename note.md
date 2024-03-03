@@ -104,6 +104,14 @@ https://www.google.com/url?sa=i&url=https%3A%2F%2Fguillermo.at%2Fbrowser-critica
 > blazer
 
 
+## CORS 
+- browser - check from which page/origin request is made.
+- request to another origin - (protocol/host/port difference) is called cors
+- call from browser to web api is AJAX request
+- 2 types of cors - basic, preflighted
+- Access control allow origin - has value * or name of origin -
+
+
 
 
 
