@@ -1,9 +1,39 @@
 # Test Specifications for Feature Publication
 
-## Feature Publication Process
-- **Objective:** Ensure that Data Scientists can successfully publish features on the Feature Mesh platform.
-- **Inputs:** Entity name, Feature name, metadata, feature data type, values(mannually, via upload)
-- **Expected Output:** Confirmation message upon successful publication or error message upon failure.
+
+## Manual Input Through GUI:
+
+  ### Test Case 1: Successful Submission  
+    Given valid data entered manually through the GUI,
+    When a POST request is sent to the API endpoint with the entered data,
+    Then the API should respond with a success status code (200 OK) and the data should be stored correctly.
+    
+  ### Test Case 2: Invalid Input
+    Given invalid data entered manually through the GUI,
+    When a POST request is sent to the API endpoint with the invalid data,
+    Then the API should respond with an error status code (400 Bad Request) and provide an informative error message.
+
+  ### Test Case 3: Security Measures
+    Given an attempt to directly send a POST request to the API endpoint without using the GUI,
+    When the request is made,
+    Then the API should respond with an error status code indicating unauthorized access (401 Unauthorized or 403 Forbidden).
+    
+## Upload Input:
+
+  ### Test Case 1: Successful Upload
+    Given a valid data file uploaded through the API,
+    When a POST request is sent to the API endpoint with the uploaded file,
+    Then the API should respond with a success status code (200 OK) and the data should be stored correctly.
+    
+  ### Test Case 2: Invalid File Format
+    Given an invalid data file format uploaded through the API,
+    When a POST request is sent to the API endpoint with the invalid file,
+    Then the API should respond with an error status code (400 Bad Request) and provide an informative error message.
+    
+  ### Test Case 3: Large File Handling
+    Given a large data file uploaded through the API,
+    When a POST request is sent to the API endpoint with the large file,
+    Then the API should respond with an error status code indicating that the file is too large to process (e.g., 413 Request Entity Too Large).
 
 
 ## Validating Insertion of Feature into database
