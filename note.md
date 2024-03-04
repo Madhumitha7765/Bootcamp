@@ -111,6 +111,40 @@ https://www.google.com/url?sa=i&url=https%3A%2F%2Fguillermo.at%2Fbrowser-critica
 - 2 types of cors - basic, preflighted
 - Access control allow origin - has value * or name of origin -
 
+# Azure
+
+## Types
+- sql(RDBMS)
+- nosql(cosmodb)
+- keyvault storage(in case of confidential storage)
+- blob storage
+- file storage
+
+## batch processing 
+- upload files to file storage service of azure, pass to cosmodb
+- everytime file is uploaded procesing of file starts
+
+## Serverless architecture in cosmodb
+### Azure Functions
+- web app hosted on a web server that runs 247 even if its not used
+- this is called server architecture
+- serverless architecture : pay as u use, but not ideal solution for everything.
+- atomic operations use serverless
+- trigger - specify when to start container
+- common trigger - http req. 
+- serverless computing - code preserved by docker images
+- lifetime of docker instance is specified for every platform
+
+## Async Await
+check for return method 
+- must be void/Task<T>
+- method name must end with async
+
+## DevSecOps
+- used to clean credentials in local scope, not publish and expose it
+
+  
+
 
 
 
