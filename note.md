@@ -143,7 +143,10 @@ check for return method
 ## DevSecOps
 - used to clean credentials in local scope, not publish and expose it
 
-  
+
+## handling exception in API
+- dont use try cach block
+- use action filters or middleware or exceptionfilter
 
 
 
