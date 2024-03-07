@@ -148,6 +148,15 @@ check for return method
 - dont use try cach block
 - use action filters or middleware or exceptionfilter
 
+## React hooks
+handle cross cutting concerns - state management
+
+## Property drilling in react
+uses flux architecture - implemented by redux
+2 scenarios where component re-rendered - on statechange, when propertires change
+props - always passed from parent to child
+solution for property drilling-react context
+
 
 
 
