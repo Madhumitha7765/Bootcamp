@@ -1,4 +1,4 @@
-# Proposed Context-Based Modules:
+# Proposed Modules:
 
 1. **Survey Module**
 2. **KPI Module**
